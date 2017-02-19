@@ -1,9 +1,10 @@
 package socketio
 
 import (
-	"github.com/googollee/go-engine.io"
 	"net/http"
 	"time"
+
+	"github.com/saikitanabe/go-engine.io"
 )
 
 // Server is the server of socket.io.
