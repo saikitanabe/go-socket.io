@@ -21,7 +21,10 @@
     <script src="/socket.io-1.7.2.js"></script>
     <script src="/jquery-1.11.1.js"></script>
     <script>
-      var socket = io();
+      var socket = io({
+        // transports: ['polling', 'websocket']
+        transports: ['polling']
+      });
       $('form').submit(function(){
         socket.emit('chat message with ack', $('#m').val(), function(data){
           $('#messages').append($('<li>').text('ACK CALLBACK: ' + data));
